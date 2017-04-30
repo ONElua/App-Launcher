@@ -1,6 +1,5 @@
 -- Custom Launcher BETA v0.1 --
 color.loadpalette()
--- BG = image.load("sce_sys/livearea/contents/arrow.png")
 BG2 = image.load("sce_sys/livearea/contents/back.png")
 BG1 = image.load("sce_sys/livearea/contents/bg0.png")
 over = 1
@@ -86,10 +85,6 @@ while true do
 		end	
 		local y = 75
 		for i=pos,math.min(list.len,pos+14) do
-					if i == pos then
-				-- screen.print(10,y,"->",1,color.red)
-			-- image.blit(BG2,0,0)
-			end	
 			screen.print(40,y,'#'+string.format("%03d",i)+' '+list.data[i].title or "unk",1,color.white,color.orange)
 			if list.data[i].flag == 0 then
 				screen.print(10,30,list.data[i].location or "unk",1,color.green)
@@ -97,7 +92,6 @@ while true do
 				screen.print(10,30,list.data[i].location or "unk",1,color.white)
 			end
 			screen.print(800,y,list.data[i].id or "unk",1,color.white,color.yellow)
-			--screen.print(600,y,list[i].cat or "unk")
 			y += 21
 		end
 		screen.print(20,465,"Press L/R for Prev/Next Page ",1,color.yellow)
